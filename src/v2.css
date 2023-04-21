@@ -1,0 +1,155 @@
+/* html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+ */
+
+.container {
+    width: 70%;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    background-color: rgb(167, 167, 167);
+    grid-template-areas:
+        ".   . . . . . . . . . ."
+        "info    info     info    info    info    .      visual visual  visual  visual visual"
+        "info    info     info    info    info    .      visual visual  visual  visual visual"
+        "info    info     info    info    info    .      visual visual  visual  visual visual"
+        "info    info     info    info    info    .      visual visual  visual  visual visual"
+        "info    info     info    info    info    .      visual visual  visual  visual visual"
+        "contact contact  contact contact contact social social social  social  social social"
+        "contact contact  contact contact contact social social social  social  social social"
+        "contact contact  contact contact contact social social social  social  social social"
+        "contact contact  contact contact contact social social social  social  social social"
+        "contact contact  contact contact contact social social social  social  social social";
+    /*     align-content: center; */
+}
+
+
+
+/* <!------------- PARTE INFERIOR IZQUIERDA ---------------> */
+
+.info {
+    grid-area: info;
+
+}
+
+.info section>hr {
+    color: rgb(255, 129, 171);
+}
+
+.info section>* {
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+
+
+/* <!------------- PARTE SUPERIOR DERECHA ---------------> */
+
+
+.visual {
+    grid-area: visual;
+
+
+}
+
+.visual img {
+    width: 70%;
+    height: auto;
+    border-radius: 3rem;
+
+
+
+}
+
+
+/* <!------------- PARTE INFERIOR DERECHA ---------------> */
+
+
+.social {
+    grid-area: social;
+}
+
+.social img {
+    width: 10%;
+    height: auto;
+
+}
+
+
+.social section {
+    margin: 0 45%;
+    width: 100%;
+
+
+}
+
+
+.imgsec img{
+    width: 30%;
+    height: auto;
+    
+
+}
+
+.redes a > img {
+    width: 30%;
+    height: auto;
+}
+
+.redes a {
+    display: ;
+} 
+
+.redes {
+    display: flex;
+/*     flex-direction: row; */
+    flex-wrap: nowrap;
+
+}
+
+/* <!------------- PARTE INFERIOR IZQUIERDA ---------------> */
+
+
+.contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*     flex-wrap: wrap;
+    align-content: flex-end; */
+
+}
+
+.contact section>a img {
+    width: 5%;
+    height: auto;
+    padding-right: 1rem;
+}
+
+.contact section>a p {
+    display: inline;
+}
+
+
+
+
+/* -------------TEMPORAL----------------- */
+/* article {
+    border: 0.3rem solid black;
+}
+
+ */
+
+
+
+
+
+/* ---------------------------------------------- */
