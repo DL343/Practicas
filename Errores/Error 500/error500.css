@@ -13,23 +13,20 @@ html {
     box-sizing: inherit;
 }
 
-
 body {
     margin: 0;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
 
 .btn {
     padding: 1rem;
-    background-color: #f1f1f1;
+    background-color: #92e3a9;
     border-radius: 0.8rem;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    width: 250px;
+
+    width: 50%;
+    max-width: 250px;
 
 }
 
@@ -37,86 +34,70 @@ img {
     background-color: #3fdd6b;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 /* *********************CUSTOM*********************** */
 
 
-
-
-
-
-.error {
-
-    margin: 0;
-    padding: 0;
-
+.error-full-center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    height: 100vh;
+ 
 }
-
-.error-hero-image {
-
-
-
-    background-image: url(./pexels-nemuel-sereti-6424583.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.error-hero-image>img {
-    min-width: 460px;
-
-}
-
-
-.error-bg-opacity {
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(138, 138, 138, 0.8);
-    z-index: 5;
-
-}
-
 
 .error-container {
     width: 95%;
+
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-family: sans-serif, Arial, Helvetica;
 
 }
 
 .error-img {
     width: 50%;
-
+    height: 40%;
     min-width: 400px;
+    margin-bottom: 50px;
+ 
 }
 
 .error-elem {
     width: 50%;
-    height: fit-content;
+    height: 40%;
+    margin-bottom: 125px;
+ /*    min-width: 400px; */
+  /*   min-height: 250px; */
     text-align: center;
     display: flex;
     flex-direction: column;
-    min-width: 400;
     flex: 1 1 auto;
-    background-color: rgba(31, 31, 31, 0.5);
-    border-radius: 2rem;
-    color: rgb(255, 255, 255);
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
-    margin-bottom: 0.5rem;
+
 
 }
 
 .error-elem>* {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin-bottom: 0.9rem;
+    margin-top: 0;
     font-weight: 500;
-    font-family: sans-serif, Arial, Helvetica;
-    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 843px) {
+    .error-elem {
+        margin: 0;
+    }
 }
