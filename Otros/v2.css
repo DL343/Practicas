@@ -1,0 +1,488 @@
+/**************************************** CUSTOM PROPERTIES ****************************************/
+:root {
+
+    --max-width: 1200px;
+    --header-height: 4rem;
+    --color1: rgb(0, 183, 255);
+    --color1-alfa: rgba(0, 183, 255, 0.8);
+    --color2: rgb(0, 0, 0);
+    --title-color: rgb(24, 24, 24);
+    --grayscale0: rgb(255, 255, 255);
+    --grayscale1: rgb(218, 218, 218);
+    --grayscale2: rgb(182, 182, 182);
+    --grayscale3: rgb(124, 124, 124);
+    --grayscale4: rgb(143, 143, 143);
+    --grayscale5: rgb(59, 59, 59);
+    --grayscale6: rgb(0, 0, 0);
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+/********************************************** RESET **********************************************/
+html {
+    box-sizing: border-box;
+    /* font-family: ??; */
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    /* color: */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h5 {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+h6 {
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+
+/******************************************* GENERIC COMPONENTS ****************************************/
+
+
+
+
+
+/* <!-------- HERO IMAGE --------> */
+.hero-image {
+    background-image: var(--hero-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: var(--attachment);
+
+
+}
+
+.hero-image-opacity {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hero-opacity-color);
+    text-align: center;
+
+}
+
+.hero-image-title {
+    color: var(--hero-text-color);
+    font-size: 7.5vw;
+}
+
+/* <!-----------------------------> */
+/* <!---------- NAV --------------> */
+
+.header-cont {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+
+/* <!-- NAV MENU--> */
+
+.menu-btn {
+    outline: thin solid var(color1);
+    border: 0;
+    background-color: var(--color2);
+    cursor: pointer;
+
+}
+
+.menu-btn svg {
+    fill: var(--color1);
+}
+
+.menu-links {
+    /*  display: none; */
+    position: fixed;
+    left: 0;
+    bottom: var(--header-height);
+    width: 100%;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.menu-links a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-links a:hover {
+    color: var(--grayscale0);
+    background-color: var(--color1);
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .menu-links {
+        position: static;
+        width: auto;
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-links a {
+        padding: 0 1rem;
+    }
+
+    .menu-links a:last-child {
+        padding-right: 0;
+    }
+
+
+    .menu-links a:hover {
+        background-color: transparent;
+    }
+}
+
+/* <!-----ProgressBar----> */
+
+progress {
+    width: 100%;
+    height: 1rem;
+    background-color: var(--grayscale2);
+}
+
+
+/* Webkit */
+
+progress::-webkit-progress-bar {
+    background-color: var(--grayscale2);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--grayscale3);
+}
+
+
+/* Moz */
+progress::-moz-progress-bar {
+    background-color: var(--grayscale3);
+}
+
+.progress {
+    margin: 1rem auto;
+}
+
+.progress>p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+
+
+/* <!---------> */
+/* <!---------> */
+/* <!---------> */
+/* <!---------> */
+
+/**********************************************  UTILITIES **********************************************/
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--grayscale0);
+    background-color: var(--color1);
+
+}
+
+.section {
+    padding: 2rem 1rem;
+}
+
+
+.none {
+    display: none;
+}
+
+.box-shadow-1 {
+    box-shadow: 0.25rem 0.25rem 1rem black;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+.gray-scale {
+    filter: grayscale(1)
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .text-lg-left {
+        text-align: left;
+    }
+
+    .text-lg-center {
+        text-align: center;
+    }
+
+    .text-lg-right {
+        text-align: right;
+    }
+
+    .full-lg-screen {
+        width: 100%;
+        min-height: 100vh;
+    }
+}
+
+.bg-gray-light {
+    background-color: var(--grayscale1);
+}
+
+.section-title {
+    border-top: thin solid var(--color1);
+    border-bottom: thin solid var(--color1);
+    width: 250px;
+    margin: 2rem auto;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.card {
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card svg {
+    margin-bottom: 1.25rem;
+    fill: var(--color1);
+    font-size: 10rem;
+}
+
+.card h3 {
+    color: var(--title-color);
+}
+
+
+
+/******************************************** SITE STYLES **********************************************/
+
+/* <!-- NAV --> */
+.header {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color2);
+    padding-top: 1rem;
+}
+
+.header>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.portfolio-card {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--color1-alfa);
+    color: var(--grayscale0);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.portfolio-card-info>div {
+    padding: 1rem;
+    border: thin solid var(--grayscale0);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* <!-- MEDIA QUERIES --> */
+
+
+
+@media screen and (min-width: 768px) {
+    .services>.container {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .services .section-title {
+        grid-column: span 2;
+    }
+
+    .portfolio>.container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .portfolio .section-title {
+        grid-column: span 2;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .header {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem;
+        height: calc(var(--header-height) - 0.5rem);
+    }
+
+    .about {
+
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+    }
+
+
+    .services>.container {
+
+        grid-template-columns: repeat(3, 30%);
+
+    }
+
+    .services .section-title {
+        grid-column: span 3;
+    }
+
+
+    .portfolio>.container {
+       
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio .section-title {
+        grid-column: span 3;
+    }
+}
+
+.about>article {
+    margin-bottom: 2rem;
+}

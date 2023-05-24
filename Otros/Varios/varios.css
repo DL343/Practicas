@@ -1,0 +1,143 @@
+/* <!------------------- BOTONES ----------------------> */
+
+.boton {
+    position: relative;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.2rem;
+    width: 15rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15);
+
+
+}
+
+.boton-anim::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 0.25rem;
+    background-color: rgb(255, 0, 81);
+    transition:
+        width 0.4s ease,
+        left 0.4s ease,
+        right 0.4s ease;
+}
+
+.boton-anim:hover::after {
+    width: 100%;
+}
+
+.to-left::after {
+    left: 0;
+}
+
+.to-center::after {
+    left: 50%;
+}
+
+.to-center:hover::after {
+    left: 0;
+}
+
+
+.to-right::after {
+    right: 0;
+}
+
+.boton-bg-gradient {
+    background-image:
+        linear-gradient(
+            to right,
+            rgb(0, 255, 234),
+            rgb(0, 136, 255),
+            rgb(0, 21, 255),
+            rgb(184, 0, 135),
+            rgb(255, 0, 85),
+            rgb(255, 0, 30));
+    background-size: 200% 100%;
+    transition: background-position 0.4s ease-in-out;
+}
+
+
+.boton-bg-gradient:hover {
+    background-position: 100% 0;
+}
+
+/* <!----------------------------------------------------->*/
+
+/* <!------------------- NAV ----------------------> */
+
+.tabs-menu {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    width: 70%;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: #bababa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs-menu input[type="radio"] {
+    display: none;
+}
+
+.tabs-menu label {
+    width: calc(100% / 4 );
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.tabs-menu label:hover {
+    color: #fff;
+}
+
+.tabs-menu input[type="radio"]:checked+label{
+    color: #fff;
+}
+
+.tab-bg-hover {
+    position: absolute;
+    width: calc(100% / 4 - 0.5rem);
+    height: 2rem;
+    background-image: linear-gradient(90deg, #f00, rgb(255, 0, 98));
+    border-radius: 0.5rem;
+    transition: transform 300ms ease-in-out;
+}
+
+#tab-1:checked ~ .tab-bg-hover {
+    transform: translateX(0);
+}
+
+#tab-2:checked ~ .tab-bg-hover {
+    transform: translateX(100%);
+}
+
+#tab-3:checked ~ .tab-bg-hover {
+    transform: translateX(200%);
+}
+
+#tab-4:checked ~ .tab-bg-hover {
+    transform: translateX(300%);
+}
+
+
+/* <!---------------------------------------------------> */
+
+
+
+
+/* <!-------------------  ----------------------> */
+/* <!----------------------------------------------------->*/
